@@ -1399,7 +1399,8 @@ table.t .r { text-align: right; }
 .cta h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: #fff; }
 /* ★ch 는 숫자 0 글리프 폭 기준이라 한글에서는 실제보다 좁게 잡힌다(46ch ≈ 405px).
    문장이 13px 모자라 접히던 문제가 있어 px 로 고정한다. */
-.cta p { color: rgba(255, 255, 255, 0.88); margin: 16px auto 30px; max-width: 460px; }
+/* 지정 줄바꿈 두 줄 유지 - 460px 로는 둘째 줄이 접힌다 */
+.cta p { color: rgba(255, 255, 255, 0.88); margin: 16px auto 30px; max-width: 640px; }
 .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .cta .btn-primary { background: #fff; color: var(--brand-ink); box-shadow: 0 10px 26px -12px rgba(0, 0, 0, 0.5); }
 .cta .btn-primary:hover { background: #fff; opacity: 0.92; }
@@ -1800,13 +1801,12 @@ table.t .r { text-align: right; }
     <div class="shell">
       <div class="tag-en">START</div>
       <h2 style="margin-top:12px">실제 사건 하나로 풀리고를 경험해 보세요</h2>
-      <p>진행 중인 사건 한 건을 등록해 링크를 보내면, 의뢰인이 인증을 마치는 순간부터 서류가 어떻게 쌓이는지 그대로 보입니다. 시연 계정과 함께 안내드립니다.</p>
+      <p>진행 중인 사건 한 건을 등록해 링크를 보내면,<br>
+        의뢰인이 인증을 마치는 순간부터 서류가 어떻게 쌓이는지 그대로 보입니다.</p>
       <div class="cta-actions">
         <a class="btn btn-primary" href="mailto:contact@pulligo.kr?subject=%ED%92%80%EB%A6%AC%EA%B3%A0%20%EB%8F%84%EC%9E%85%20%EC%83%81%EB%8B%B4">무료로 시작하기</a>
         <a class="btn btn-ghost" href="collect.html">서비스 둘러보기</a>
       </div>
-      <p class="fine">약정 없음 · 베타에서 유료로 자동 전환되지 않습니다 · 시연 계정만 받아 보셔도 됩니다.<br>
-        베타 기간 서비스 이용료 무료. 등기 발급 시 등기소에 납부하는 전자민원캐시 등 실비는 사무소 부담입니다.</p>
     </div>
   </section>
 </main>
