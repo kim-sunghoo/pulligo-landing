@@ -1280,7 +1280,8 @@ table.t .r { text-align: right; }
 .cta h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: #fff; }
 /* ★ch 는 숫자 0 글리프 폭 기준이라 한글에서는 실제보다 좁게 잡힌다(46ch ≈ 405px).
    문장이 13px 모자라 접히던 문제가 있어 px 로 고정한다. */
-.cta p { color: rgba(255, 255, 255, 0.88); margin: 16px auto 30px; max-width: 460px; }
+/* 지정 줄바꿈 세 줄 유지 - 460px 로는 마지막 줄이 접힌다 (pricing.html 과 동일) */
+.cta p { color: rgba(255, 255, 255, 0.88); margin: 16px auto 30px; max-width: 620px; }
 .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .cta .btn-primary { background: #fff; color: var(--brand-ink); box-shadow: 0 10px 26px -12px rgba(0, 0, 0, 0.5); }
 .cta .btn-primary:hover { background: #fff; opacity: 0.92; }
@@ -1511,11 +1512,11 @@ table.t .r { text-align: right; }
           <div class="faq">
             <details>
               <summary><i>Q</i>미리보기와 다운로드가 왜 다른가요?</summary>
-              <div class="a">미리보기는 이미지로 변환해 띄웁니다. 화면에서 확인하는 용도라 텍스트 복사가 되지 않습니다. 다운로드는 텍스트가 살아 있는 원본이라 제출용으로 그대로 씁니다. 인쇄와 저장은 뷰어 버튼에서 바로 됩니다.</div>
+              <div class="a">미리보기는 빠르게 확인하고, 다운로드는 제출용 원본 PDF로 사용합니다. 인쇄와 저장은 뷰어 버튼에서 바로 됩니다.</div>
             </details>
             <details>
               <summary><i>Q</i>여러 건을 한 번에 내려받을 수 있나요?</summary>
-              <div class="a">됩니다. 한 파일로 병합하거나, 주소별 또는 문서 종류별로 나눠 ZIP으로 받습니다. 주소가 2건 이상이면 기본값이 주소별 ZIP입니다. 단일 대용량 PDF는 저장과 열람이 모두 무거워서 한 파일 병합은 주소 10건까지만 허용합니다.</div>
+              <div class="a">됩니다. 한 파일로 병합하거나, 주소별 또는 문서 종류별로 나눠 ZIP으로 받습니다.</div>
             </details>
             <details>
               <summary><i>Q</i>의뢰인 인증이 필요한가요?</summary>
@@ -1523,7 +1524,7 @@ table.t .r { text-align: right; }
             </details>
             <details>
               <summary><i>Q</i>등기 수수료는 어떻게 결제되나요?</summary>
-              <div class="a">사무소 명의 선불카드로 등기소에 직접 결제됩니다. 카드는 설정 화면에서 여러 장 등록할 수 있고, 결제는 카드 단위로 순서대로 처리됩니다. 승인 이력이 건별로 남습니다.</div>
+              <div class="a">사무소 명의 선불카드로 등기소에 직접 결제됩니다. 등기소로 나가는 실비와 저희 서비스 수수료는 합산하지 않고 따로 보여 드립니다.</div>
             </details>
             <details>
               <summary><i>Q</i>같은 부동산을 실수로 두 번 발급하면요?</summary>
@@ -1627,7 +1628,7 @@ table.t .r { text-align: right; }
             </details>
             <details>
               <summary><i>Q</i>등기소 실비는 왜 요금표와 따로 있나요?</summary>
-              <div class="a">전자민원캐시는 사무소 명의 선불카드에서 등기소로 직접 결제되는 돈이라 저희 매출이 아닙니다. 저희가 받는 것은 건당 100원의 서비스 수수료뿐입니다. 정산 화면에서도 두 축을 합산하지 않고 따로 보여 드립니다.</div>
+              <div class="a">전자민원캐시는 사무소 명의 선불카드에서 등기소로 직접 결제되는 비용이라 저희 매출이 아닙니다. 저희가 받는 것은 건당 100원의 서비스 수수료뿐입니다. 정산 화면에서도 두 축을 합산하지 않고 따로 보여 드립니다.</div>
             </details>
             <details>
               <summary><i>Q</i>도입비 100,000원에는 무엇이 들어가나요?</summary>
@@ -1694,8 +1695,9 @@ table.t .r { text-align: right; }
     <div class="shell">
       <div class="tag-en">START</div>
       <h2 style="margin-top:12px">실제 사건 하나로 풀리고를 경험해 보세요</h2>
-      <p>베타 기간에는 전 기능을 무료로 이용할 수 있습니다.
-        실사건 3건 이상을 처리하시면 도입비가 면제되고, 5건 이상이면 전환 후 3개월간 서류수집 2건을 더 드립니다.</p>
+      <p>베타 기간에는 전 기능을 무료로 이용할 수 있습니다.<br>
+        실사건 3건 이상을 처리하시면 도입비가 면제되고,<br>
+        5건 이상이면 전환 후 3개월간 서류수집 2건을 더 드립니다.</p>
       <div class="cta-actions">
         <a class="btn btn-primary" href="mailto:contact@pulligo.kr?subject=%ED%92%80%EB%A6%AC%EA%B3%A0%20%EB%8F%84%EC%9E%85%20%EC%83%81%EB%8B%B4">무료로 시작하기</a>
         <a class="btn btn-ghost" href="index.html">서비스 전체 보기</a>
