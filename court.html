@@ -574,6 +574,12 @@ h1, h2, h3, h4 {
   .dropdown a span { display: none; }
   .top-in { position: relative; }
 }
+
+@media (max-width: 720px) {
+  /* ★.checks li 가 flex 면 텍스트와 <b> 가 각각 항목이 되어 문장 중간에서 줄이 갈린다 */
+  .checks li { display: block; position: relative; padding-left: 29px; }
+  .checks li::before { position: absolute; left: 0; top: 2px; margin-top: 0; }
+}
 </style>
 
 <header class="top">

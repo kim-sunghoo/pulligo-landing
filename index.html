@@ -984,6 +984,12 @@ table.t .num { font-family: var(--ff-mono); font-variant-numeric: tabular-nums; 
   .dropdown a span { display: none; }
   .top-in { position: relative; }
 }
+
+@media (max-width: 720px) {
+  /* 버튼 두 개가 접히지 않고 한 줄에 나란히 */
+  .hero-actions { flex-wrap: nowrap; }
+  .hero-actions .btn { flex: 1 1 0; min-width: 0; justify-content: center; padding-left: 14px; padding-right: 14px; white-space: nowrap; }
+}
 </style>
 
 <div class="banner" id="banner">

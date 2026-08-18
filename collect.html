@@ -674,6 +674,20 @@ h1, h2, h3, h4 {
   .dropdown a span { display: none; }
   .top-in { position: relative; }
 }
+
+@media (max-width: 720px) {
+  /* ★.checks li 가 flex 면 텍스트와 <b> 가 각각 항목이 되어 문장 중간에서 줄이 갈린다 */
+  .checks li { display: block; position: relative; padding-left: 29px; }
+  .checks li::before { position: absolute; left: 0; top: 2px; margin-top: 0; }
+}
+
+@media (max-width: 560px) { .orgs-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 720px) {
+  /* 기관명이 길면 카드 밖으로 밀린다 - 줄바꿈 허용하고 숫자는 고정 */
+  .org-chip { align-items: center; gap: 8px; padding: 13px 14px; }
+  .org-chip .o { min-width: 0; font-size: 13px; overflow-wrap: anywhere; }
+  .org-chip .n { font-size: 16px; }
+}
 </style>
 
 <header class="top">
