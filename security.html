@@ -192,8 +192,6 @@ h1, h2, h3, h4 {
 .nav { display: flex; align-items: center; gap: 2px; margin-left: auto; min-width: 0; scrollbar-width: none; }
 .nav::-webkit-scrollbar { display: none; }
 
-@media (max-width: 899px) {
-  .nav { overflow-x: auto; }}
 
 .nav a {
   font-size: 14.5px;
@@ -276,24 +274,6 @@ h1, h2, h3, h4 {
 .dropdown a span { display: block; font-size: 11.5px; font-weight: 500; color: var(--ink-3); margin-top: 2px; }
 .dropdown a:hover span { color: var(--brand-ink); }
 
-@media (max-width: 899px) {
-  .nav-item { position: static; }
-  .nav-item > button { display: none; }
-  .dropdown {
-    position: static;
-    display: flex;
-    gap: 2px;
-    padding: 0;
-    min-width: 0;
-    background: none;
-    border: 0;
-    box-shadow: none;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-  }
-  .dropdown a { padding: 8px 11px; white-space: nowrap; }
-  .dropdown a span { display: none; }}
 
 .top .btn { flex: none; }
 
@@ -428,12 +408,50 @@ h1, h2, h3, h4 {
 @media (min-width: 1160px) { .sc p br.wbr { display: inline; }}
 
 /* CTA 리드 한 줄 유지 (공용 460px로는 두 줄로 접힌다) */
-.cta p { max-width: 640px; }</style>
+.cta p { max-width: 640px; }
+/* ── 모바일 메뉴 ── 가로 스크롤 목록은 메뉴로 보이지 않아 햄버거로 바꾼다 */
+.nav-toggle { display: none; }
+@media (max-width: 899px) {
+  .nav-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; margin-left: auto; flex: none;
+    border: 1px solid var(--line); border-radius: 10px;
+    background: var(--card); cursor: pointer; color: var(--ink);
+  }
+  .nav-toggle span { position: relative; display: block; width: 17px; height: 1.8px; background: currentColor; border-radius: 2px; }
+  .nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; width: 17px; height: 1.8px; background: currentColor; border-radius: 2px; }
+  .nav-toggle span::before { top: -5.5px; }
+  .nav-toggle span::after { top: 5.5px; }
+  .nav-toggle[aria-expanded="true"] span { background: transparent; }
+  .nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+
+  .nav {
+    position: absolute; left: 0; right: 0; top: 100%;
+    display: none; flex-direction: column; gap: 2px; overflow: visible;
+    padding: 10px 16px 16px;
+    background: var(--bg); border-bottom: 1px solid var(--line);
+    box-shadow: 0 14px 30px -18px rgba(18, 40, 63, 0.35);
+  }
+  .nav.open { display: flex; }
+  .nav { align-items: stretch; }
+  .nav a, .dropdown a { text-align: left; }
+  .dropdown li { list-style: none; }
+  .nav a { padding: 12px 10px; font-size: 15px; border-radius: 10px; }
+  .nav-item { position: static; }
+  .nav-item > button { display: none; }
+  .dropdown { position: static; display: flex; flex-direction: column; gap: 2px; padding: 0; min-width: 0; background: none; border: 0; box-shadow: none; opacity: 1; visibility: visible; transform: none; }
+  .dropdown a { padding: 12px 10px; white-space: normal; }
+  .dropdown a span { display: none; }
+  .top-in { position: relative; }
+}
+</style>
 
 <header class="top">
   <div class="shell top-in">
     <a class="logo" href="index.html"><i></i>풀리고</a>
-    <nav class="nav" aria-label="주요 섹션">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="주요 섹션">
       <div class="nav-item">
         <button type="button" aria-expanded="false" aria-haspopup="true">주요기능</button>
         <ul class="dropdown">
@@ -602,6 +620,17 @@ h1, h2, h3, h4 {
     });
   });
 })();
+
+  // 모바일 메뉴 열고 닫기
+  (function () {
+    var t = document.querySelector('.nav-toggle'), n = document.querySelector('.nav');
+    if (!t || !n) return;
+    t.addEventListener('click', function () {
+      var open = n.classList.toggle('open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    n.addEventListener('click', function (e) { if (e.target.tagName === 'A') { n.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); } });
+  })();
 </script>
 
 </body>
