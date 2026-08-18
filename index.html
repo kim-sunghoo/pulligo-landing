@@ -227,8 +227,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 640px) {
   .banner-in { padding: 10px 44px; font-size: 12.5px; }
-  .banner .sub { display: none; }
-}
+  .banner .sub { display: none; }}
 
 /* ─────────────────────────  레이어 팝업  ───────────────────────── */
 .pop {
@@ -304,8 +303,7 @@ h1, h2, h3, h4 {
 .pop-foot button + button { border-left: 1px solid var(--line-soft); }
 
 @media (max-width: 720px) {
-  .pop { left: 16px; right: 16px; bottom: 16px; width: auto; }
-}
+  .pop { left: 16px; right: 16px; bottom: 16px; width: auto; }}
 
 /* ─────────────────────────  헤더  ───────────────────────── */
 .top {
@@ -354,8 +352,7 @@ h1, h2, h3, h4 {
 .nav::-webkit-scrollbar { display: none; }
 
 @media (max-width: 899px) {
-  .nav { overflow-x: auto; }
-}
+  .nav { overflow-x: auto; }}
 
 .nav a {
   font-size: 14.5px;
@@ -455,12 +452,11 @@ h1, h2, h3, h4 {
     transform: none;
   }
   .dropdown a { padding: 8px 11px; white-space: nowrap; }
-  .dropdown a span { display: none; }
-}
+  .dropdown a span { display: none; }}
 
 .top .btn { flex: none; }
 
-@media (max-width: 860px) { .top .btn { display: none; } }
+@media (max-width: 860px) { .top .btn { display: none; }}
 
 /* ─────────────────────────  히어로  ───────────────────────── */
 .hero {
@@ -481,26 +477,9 @@ h1, h2, h3, h4 {
 }
 
 @media (min-width: 980px) {
-  .hero-in { grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr); gap: 56px; padding: 84px 0 88px; }
-}
+  .hero-in { grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr); gap: 56px; padding: 84px 0 88px; }}
 
 .hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 7px 15px 7px 12px;
-  border-radius: 999px;
-  background: var(--brand-soft);
-  border: 1px solid var(--brand-line);
-  color: var(--brand-ink);
-  font-size: 13.5px;
-  font-weight: 700;
-}
-
-.pill i { width: 7px; height: 7px; border-radius: 50%; background: var(--brand); flex: none; animation: blip 2.4s ease-in-out infinite; }
-.pill span { font-weight: 500; opacity: 0.8; }
 
 @keyframes blip { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
@@ -607,8 +586,7 @@ h1, h2, h3, h4 {
 @media (prefers-reduced-motion: reduce) {
   .stamp.on { animation: none; opacity: 1; transform: rotate(-14deg) scale(1); }
   .stamp.on::before { animation: none; }
-  .panel.hit { animation: none; }
-}
+  .panel.hit { animation: none; }}
 
 .panel-head {
   display: flex;
@@ -664,8 +642,7 @@ h1, h2, h3, h4 {
 .ba { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; align-items: stretch; }
 
 @media (min-width: 940px) {
-  .ba { grid-template-columns: minmax(0, 1fr) 72px minmax(0, 1fr); gap: 0; }
-}
+  .ba { grid-template-columns: minmax(0, 1fr) 72px minmax(0, 1fr); gap: 0; }}
 
 /* 두 카드의 항목 수가 달라도 푸터는 같은 높이에 오도록 바닥에 붙인다 */
 .ba-card { border-radius: 18px; padding: 30px 28px 26px; display: flex; flex-direction: column; }
@@ -699,28 +676,6 @@ h1, h2, h3, h4 {
 .ba-head strong { font-family: var(--ff-display); font-size: 17px; letter-spacing: -0.02em; }
 .ba-card.before .ba-head strong { color: var(--ink-2); }
 .ba-card.after .ba-head strong { color: var(--brand); }
-
-.ba-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
-
-.ba-list li {
-  display: grid;
-  grid-template-columns: 52px minmax(0, 1fr);
-  gap: 12px;
-  align-items: start;
-  padding: 13px 0;
-  border-top: 1px solid var(--line-soft);
-  font-size: 14.5px;
-}
-
-.ba-list li:first-child { border-top: 0; padding-top: 0; }
-
-.ba-list em {
-  font-style: normal;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--ink-3);
-  padding-top: 3px;
-}
 
 .ba-card.before .ba-list li { color: var(--ink-2); }
 .ba-card.after .ba-list li { color: var(--ink-2); }
@@ -756,56 +711,19 @@ h1, h2, h3, h4 {
 
 .ba-mid svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
 
-@media (min-width: 940px) { .ba-mid div { transform: none; } }
-
-/* ─────────────────────────  혜택 3장  ───────────────────────── */
-.perks { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
-
-@media (min-width: 700px) { .perks { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1060px) { .perks { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-
-.perk {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--r-card);
-  padding: 28px 26px 30px;
-  box-shadow: var(--sh-sm);
-  transition: transform 0.18s, box-shadow 0.18s;
-}
-
-.perk:hover { transform: translateY(-3px); box-shadow: var(--sh); }
-
-.perk .ico {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: var(--brand-soft);
-  color: var(--brand);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.perk .ico svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
-.perk h3 { font-size: 18px; margin-bottom: 9px; }
-.perk p { font-size: 14.5px; color: var(--ink-2); }
-
-/* ─────────────────────────  주요기능 4카드  ───────────────────────── */
-.feat { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
-@media (min-width: 700px) { .feat { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 940px) { .ba-mid div { transform: none; }}
 
 /* 01 서류 자동수집은 나머지 셋과 동급으로 보이면 안 된다.
    한 줄을 통째로 쓰고 브랜드면을 깔아 시작점으로 읽히게 한다. */
 .feat-lead { display: grid; grid-template-columns: minmax(0, 1fr); margin-bottom: 18px; }
 .feat-rest { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
-@media (min-width: 640px) { .feat-rest { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 980px) { .feat-rest { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 640px) { .feat-rest { grid-template-columns: repeat(2, minmax(0, 1fr)); }}
+@media (min-width: 980px) { .feat-rest { grid-template-columns: repeat(3, minmax(0, 1fr)); }}
 
 .feat-card.lead { background: var(--brand-soft); border-color: var(--brand-line); box-shadow: var(--sh); padding: 32px 30px 30px; }
 .feat-card.lead h3 { font-size: clamp(21px, 2.4vw, 26px); margin-bottom: 12px; }
 .feat-card.lead > p { font-size: 16px; color: var(--ink); margin-bottom: 20px; max-width: 62ch; }
-@media (min-width: 860px) { .feat-card.lead .mini { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 24px; } }
+@media (min-width: 860px) { .feat-card.lead .mini { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 24px; }}
 /* 나머지 셋은 한 단계 낮춰 부차 기능으로 */
 .feat-rest .feat-card h3 { font-size: 18px; }
 
@@ -838,18 +756,6 @@ h1, h2, h3, h4 {
 .feat-card h3 { font-size: 20px; margin-bottom: 10px; }
 .feat-card > p { font-size: 14.5px; color: var(--ink-2); margin-bottom: 18px; }
 
-.mini { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-.mini li { font-size: 13.5px; color: var(--ink-2); padding-left: 15px; position: relative; }
-.mini li::before { content: ""; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: var(--brand-line); }
-.mini b { color: var(--ink); font-weight: 700; }
-
-/* ★"기본료에 포함됩니다" 목록 안에 등기를 그냥 얹으면 발급 수수료까지 무료로 읽힌다.
-   실제로는 기능만 열려 있고 건당 100원 + 등기소 실비가 따로 붙는다. 회색 + 금액 병기. */
-.mini li.off { color: var(--ink-3); }
-.mini li.off b { color: var(--ink-3); font-weight: 400; }
-.mini li.off::before { background: var(--line); }
-.mini li .fee { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
-
 .feat-card .more { margin-top: 20px; font-size: 13.5px; font-weight: 700; color: var(--brand); }
 
 /* 기능 카드 배경 워터마크 — 브랜드색을 박은 인라인 SVG(외부 요청 0건).
@@ -857,280 +763,33 @@ h1, h2, h3, h4 {
    보안 카드에도 장식이 붙어 눌리는 것처럼 보인다. */
 /* 보안 섹션 하단 설명 상자 — pricing.html 과 같은 정의 */
 .note-box { margin-top: 18px; padding: 16px 18px; border-radius: 12px; background: var(--brand-soft); border: 1px solid var(--brand-line); font-size: 13.5px; color: var(--ink-2); line-height: 1.75; }
-.note-box b { color: var(--brand-ink); }
 
 /* 홈 요금 요약 - 상세는 pricing.html 이 맡고 여기서는 시작 조건만 */
 .price-lite { max-width: 620px; margin: 0 auto; text-align: center; background: var(--card); border: 1px solid var(--brand-line); border-radius: var(--r-card); padding: 30px 28px 30px; box-shadow: var(--sh-sm); }
 .pl-lb { display: block; font-size: 13.5px; font-weight: 700; color: var(--ink-3); }
 /* ★상담에서 처음 듣지 않도록 두 축을 처음부터 갈라서 보여 준다 */
 .pl-rows { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; margin: 18px 0 0; }
-@media (min-width: 620px) { .pl-rows { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; } }
+@media (min-width: 620px) { .pl-rows { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; }}
 .pl-row { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 8px; }
-@media (min-width: 620px) { .pl-row + .pl-row { border-left: 1px solid var(--line); } }
+@media (min-width: 620px) { .pl-row + .pl-row { border-left: 1px solid var(--line); }}
 .pl-name { font-size: 14px; font-weight: 700; color: var(--ink-2); }
 .pl-won { font-family: var(--ff-display); font-size: clamp(1.6rem, 3.4vw, 2rem); letter-spacing: -0.03em; color: var(--ink); }
 .pl-won em { font-style: normal; font-size: 0.42em; font-weight: 700; color: var(--ink-3); margin-left: 4px; }
 .pl-sub { font-size: 12.5px; color: var(--ink-3); margin-top: 2px; }
 .pl-note { margin: 16px 0 0; font-size: 13.5px; color: var(--ink-2); }
 .pl-cond { margin: 14px 0 24px; font-size: 13.5px; color: var(--ink-3); }
-#features .feat-card { overflow: hidden; }
-#features .feat-card::after {
-  content: "";
-  position: absolute;
-  right: 18px;
-  bottom: 18px;
-  width: 128px;
-  height: 128px;
-  opacity: 0.16;
-  pointer-events: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-#features .feat-card:nth-child(1)::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%272.9%201.9%2018.2%2018.2%27%20fill%3D%27none%27%20stroke%3D%27%231d3a5f%27%20stroke-width%3D%271.3%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M7%203.5h7l4%204V17a1.5%201.5%200%200%201-1.5%201.5h-9A1.5%201.5%200%200%201%206%2017V5a1.5%201.5%200%200%201%201-1.5z%27%2F%3E%3Cpath%20d%3D%27M14%203.5v4h4%27%2F%3E%3Cpath%20d%3D%27M9%2012.8l2%202%203.6-4.2%27%2F%3E%3C%2Fsvg%3E"); }
-#features .feat-card:nth-child(2)::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%271.9%202.4%2020.2%2020.2%27%20fill%3D%27none%27%20stroke%3D%27%231d3a5f%27%20stroke-width%3D%271.3%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M3.5%2020.5h17%27%2F%3E%3Cpath%20d%3D%27M5%2020.5V9l7-4.5L19%209v11.5%27%2F%3E%3Cpath%20d%3D%27M10%2020.5v-5h4v5%27%2F%3E%3C%2Fsvg%3E"); }
-#features .feat-card:nth-child(3)::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%271.9%201.9%2020.2%2020.2%27%20fill%3D%27none%27%20stroke%3D%27%231d3a5f%27%20stroke-width%3D%271.3%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Crect%20x%3D%273.5%27%20y%3D%275.5%27%20width%3D%2717%27%20height%3D%2715%27%20rx%3D%272.5%27%2F%3E%3Cpath%20d%3D%27M3.5%2010.5h17M8%203.5v4M16%203.5v4%27%2F%3E%3Cpath%20d%3D%27M7.5%2014.5h3M7.5%2017.5h7%27%2F%3E%3C%2Fsvg%3E"); }
-#features .feat-card:nth-child(4)::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270.9%200.9%2022.2%2022.2%27%20fill%3D%27none%27%20stroke%3D%27%231d3a5f%27%20stroke-width%3D%271.3%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Crect%20x%3D%272.5%27%20y%3D%275.5%27%20width%3D%2719%27%20height%3D%2713%27%20rx%3D%272.5%27%2F%3E%3Cpath%20d%3D%27M2.5%2010h19%27%2F%3E%3Cpath%20d%3D%27M6%2014.5h4%27%2F%3E%3C%2Fsvg%3E"); }
 
-/* ─────────────────────────  이용요금  ───────────────────────── */
-/* 베타 배너 */
-.beta-now {
-  padding: 32px 26px 26px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #12283f, #1d3a5f 58%, #2b5480);
-  color: #fff;
-  margin-bottom: 34px;
-  text-align: center;
-}
-
-.beta-h {
-  display: block;
-  font-family: var(--ff-display);
-  font-size: clamp(1.2rem, 2.8vw, 1.7rem);
-  letter-spacing: -0.03em;
-  line-height: 1.35;
-}
-
-/* ★두 혜택이 이 페이지에서 가장 센 소구점인데 곁다리 텍스트로 붙어 있었다.
-   각각 한 칸을 차지하는 카드로 세운다. 좁은 화면에서는 위아래로 쌓인다. */
-.beta-now ul {
-  list-style: none;
-  margin: 24px 0 0;
-  padding: 0;
-  display: grid;
-  gap: 10px;
-}
-
-@media (min-width: 720px) { .beta-now ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
-
-.beta-now li {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: center;
-  gap: 4px 9px;
-  padding: 16px 20px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.17);
-  font-size: 14px;
-}
-
-.beta-now li .it { color: rgba(255, 255, 255, 0.85); }
-.beta-now li s { color: rgba(255, 255, 255, 0.5); }
-.beta-now li .ar { font-style: normal; color: rgba(255, 255, 255, 0.45); }
-.beta-now li .free { font-family: var(--ff-display); font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
-
-/* ★혜택마다 조건이 달라 각 카드 안에 붙인다. basis 100% 로 줄을 바꿔 금액 아래에 놓는다. */
-.beta-now li .cond { flex-basis: 100%; margin-top: 4px; font-size: 12px; color: rgba(255, 255, 255, 0.62); }
-.beta-now li .cond b { color: rgba(255, 255, 255, 0.92); }
-
-.beta-cond { margin-top: 18px; font-size: 13px; color: rgba(255, 255, 255, 0.75); }
-.beta-cond b { color: #fff; }
-
-/* 요금표 */
-/* ★플랜 두 장을 나란히. 포함 항목 수가 같아도 주석 줄 수가 달라 stretch 로 높이를 맞춘다. */
-.plan { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; align-items: stretch; }
-@media (min-width: 860px) { .plan { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; } }
-
-.plan-main {
-  display: flex;
-  flex-direction: column;
-  background: var(--card);
-  border: 1px solid var(--brand);
-  border-radius: 16px;
-  padding: 30px 28px 32px;
-  box-shadow: var(--sh);
-}
-
-/* ★라이트는 보조 선택지다. 배경은 베이직과 같은 흰 카드로 두고 테두리·그림자만
-   낮춘다. --bg-sunken 을 깔아 봤더니 그 위에서 회색 글자(--ink-3)가 안 읽혔다. */
-.plan-main.lite { border-color: var(--line); box-shadow: var(--sh-sm); }
-.plan-main.lite .won { color: var(--ink); }
-
-.plan-main .lb .pick {
-  display: inline-block;
-  margin-left: 7px;
-  padding: 2px 9px;
-  border-radius: 999px;
-  background: var(--brand);
-  color: #fff;
-  font-size: 11.5px;
-  vertical-align: 2px;
-}
-
+/* 서비스 카드 아이콘 (lucide) - 배경 워터마크 대신 앞면 배지로 */
+.feat-ico { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-bottom: 14px; border-radius: 12px; background: var(--brand-soft); }
+.feat-ico svg { width: 22px; height: 22px; fill: none; stroke: var(--brand); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.feat-card.lead .feat-ico { width: 50px; height: 50px; border-radius: 14px; background: var(--card); }
+.feat-card.lead .feat-ico svg { width: 25px; height: 25px; }
 .plan-main .foot { margin-top: 16px; padding: 16px 0 0; border-top: 1px solid var(--line-soft); font-size: 13px; color: var(--ink-3); }
-
-.plan-main .lb { font-size: 14px; font-weight: 700; color: var(--ink-2); }
-.plan-main .won { font-family: var(--ff-display); font-size: 44px; letter-spacing: -0.04em; color: var(--brand); margin: 6px 0 4px; }
-.plan-main .won em { font-style: normal; font-size: 0.4em; margin-left: 4px; }
-.plan-main .vat { font-size: 12.5px; color: var(--ink-3); margin-bottom: 20px; }
-
-/* ★금액과 VAT 표기를 한 줄에. VAT 는 margin-left:auto 로 우측 끝에 붙이고
-   기준선(baseline)을 금액과 맞춘다. 폭이 모자라면 wrap 되어 아래로 떨어진다. */
-.plan-main .wonrow { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; margin: 6px 0 20px; }
-.plan-main .wonrow .won { margin: 0; }
-.plan-main .wonrow .vat { margin: 0 0 0 auto; }
-.plan-main .inc { border-top: 1px solid var(--line-soft); padding-top: 18px; }
-.plan-main .inc strong { display: block; font-size: 13px; color: var(--ink-3); margin-bottom: 12px; }
-
-.rate { border: 1px solid var(--line); border-radius: 16px; background: var(--card); overflow: hidden; box-shadow: var(--sh-sm); }
-.rate table { width: 100%; border-collapse: collapse; font-size: 14px; }
-/* ★타이틀바에 --bg-soft 를 쓰면 안 된다. sec-soft 절 배경과 같은 값(#efece4)이라
-   흰 카드 위에서 색이 안 서고 카드 윗부분이 뚫린 것처럼 보인다. --bg-sunken 을 쓴다
-   (토큰 정의 옆 주석에 같은 함정이 적혀 있다). */
-.rate th { text-align: left; font-size: 12px; font-weight: 700; color: var(--ink-3); padding: 13px 18px; background: var(--bg-sunken); border-bottom: 1px solid var(--line); }
-.rate td { padding: 14px 18px; border-bottom: 1px solid var(--line-soft); color: var(--ink-2); }
-.rate tbody tr:last-child td { border-bottom: 0; }
-.rate .it { color: var(--ink); font-weight: 700; }
-.rate .amt { text-align: right; white-space: nowrap; font-family: var(--ff-mono); font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 700; }
 .rate .sub { display: block; font-size: 11.5px; font-weight: 400; color: var(--ink-3); margin-top: 2px; }
-.rate tr.dim td { background: var(--bg-soft); }
-
-.sim { margin-top: 26px; border: 1px solid var(--line); border-radius: 16px; background: var(--card); overflow: hidden; box-shadow: var(--sh-sm); }
-.sim-head { padding: 14px 18px; border-bottom: 1px solid var(--line); font-size: 13px; font-weight: 700; background: var(--bg-sunken); }
-.sim-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (min-width: 760px) { .sim-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
-.sim-cell { padding: 18px; text-align: center; border-right: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
-.sim-cell:last-child { border-right: 0; }
-.sim-cell .c { font-size: 12.5px; color: var(--ink-3); }
-.sim-cell .t { font-family: var(--ff-display); font-size: 20px; color: var(--ink); margin: 6px 0 3px; letter-spacing: -0.02em; }
-.sim-cell .e { font-size: 11.5px; color: var(--brand); font-weight: 700; }
-.price-note { margin-top: 18px; font-size: 13px; color: var(--ink-3); line-height: 1.75; }
-
-.price { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; align-items: stretch; }
-@media (min-width: 900px) { .price { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-
-.price-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 28px 26px 30px;
-  box-shadow: var(--sh-sm);
-  display: flex;
-  flex-direction: column;
-}
-
-.price-card.main { border-color: var(--brand); box-shadow: var(--sh); }
-
-.tagp {
-  display: inline-block;
-  align-self: flex-start;
-  font-family: var(--ff-mono);
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  padding: 3px 10px;
-  border-radius: 5px;
-  background: var(--brand);
-  color: #fff;
-  margin-bottom: 12px;
-}
-
-.price-card h3 { font-size: 16px; color: var(--ink-2); }
-.price-card .amount { font-family: var(--ff-display); font-size: 44px; letter-spacing: -0.04em; color: var(--brand); margin: 8px 0 14px; }
-.price-card .amount em { font-style: normal; font-size: 0.42em; margin-left: 3px; }
-.price-card .amount.sm { font-size: 19px; color: var(--ink); letter-spacing: -0.02em; margin-top: 10px; }
-.price-card > p { font-size: 14px; color: var(--ink-2); margin-bottom: 18px; }
-.price-card .mini { margin-top: auto; }
-
-/* ─────────────────────────  좌우 교차 섹션  ───────────────────────── */
-.zig { display: grid; grid-template-columns: minmax(0, 1fr); gap: 34px; align-items: center; }
-
-@media (min-width: 980px) {
-  .zig { grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr); gap: 64px; }
-  .zig.rev { grid-template-columns: minmax(0, 1.14fr) minmax(0, 0.86fr); }
-  .zig.rev .zig-copy { order: 2; }
-}
 
 .zig-copy .tag-en { display: block; margin-bottom: 18px; }
-.zig-copy h2 { font-size: clamp(1.5rem, 3vw, 2.05rem); line-height: 1.32; }
-.zig-copy p { font-size: 15px; line-height: 1.75; color: var(--ink-2); margin: 20px 0 22px; }
-/* ★설명과 캡처 사이가 좁으면 답답하다. 캡처가 있는 블록만 행 간격을 넓힌다.
-   (문단 아래 margin 22px 에 더해진다) */
-/* ★목록으로 끝나는 블록(.checks margin 0)과 문단으로 끝나는 블록(p margin-bottom 22px)이
-   캡처와의 거리가 22px 달라진다. 마지막 자식 여백을 없애 row-gap 하나로 통일한다. */
-.zig-copy > :last-child, .stepbig-copy > :last-child { margin-bottom: 0; }
-.zig:has(.shot) { row-gap: 44px; }
-@media (min-width: 980px) { .zig:has(.shot) { row-gap: 72px; } }
-.checks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
-.checks li { display: flex; gap: 10px; font-size: 14.5px; color: var(--ink-2); }
-
-.checks li::before {
-  content: "";
-  flex: none;
-  width: 19px;
-  height: 19px;
-  margin-top: 3px;
-  border-radius: 50%;
-  background: var(--brand-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231d3a5f' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center / 11px no-repeat;
-}
-
-.checks b { color: var(--ink); font-weight: 700; }
-
-/* 목업 공통 */
-/* 서브페이지 히어로 — 좌 텍스트 / 우 일러스트 2단. 좁은 화면에서는 일러스트를 숨긴다(장식이라 정보 손실 없음). */
-.sh-art { display: none; }
 @media (min-width: 900px) {
-  .subhero .shell { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr); gap: 44px; align-items: center; }
-  .sh-copy { min-width: 0; }
-  .sh-art { display: block; min-width: 0; }
-}
-/* ★자식 결합자 필수 — 그냥 .sh-art svg 로 쓰면 안쪽 중첩 <svg>(unDraw 크롭)까지 overflow:visible 이 걸려
-   viewBox 크롭이 무효가 되고 잘라낸 부분이 그대로 보인다. */
-.sh-art > svg { display: block; width: 100%; height: auto; overflow: visible; }
-.sh-art .a-card { fill: var(--card); stroke: var(--line); stroke-width: 1.4; }
-.sh-art .a-card-b { fill: var(--brand); }
-.sh-art .a-line { fill: var(--line); }
-.sh-art .a-line2 { fill: var(--brand-line); }
-.sh-art .a-ink { fill: var(--ink); }
-.sh-art .a-sub { fill: var(--ink-3); }
-.sh-art .a-brand { fill: var(--brand); }
-.sh-art .a-soft { fill: var(--brand-soft); }
-.sh-art .a-ok { fill: var(--ok); }
-.sh-art .a-warn { fill: var(--warn); }
-.sh-art .a-stroke { fill: none; stroke: var(--brand-line); stroke-width: 1.6; }
-.sh-art .a-glow { fill: var(--brand-soft); }
-.sh-art .a-t { font-family: var(--ff-body); font-size: 11px; font-weight: 700; fill: var(--ink-2); }
-.sh-art .a-t-s { font-family: var(--ff-body); font-size: 9.5px; font-weight: 600; fill: var(--ink-3); }
-.sh-art .a-t-w { font-family: var(--ff-body); font-size: 10.5px; font-weight: 700; fill: #fff; }
-/* unDraw 합성 일러스트용 색 — 2026-08 검토 끝에 자체 다이어그램으로 확정해 현재는 쓰지 않는다.
-   다시 쓸 일이 있으면 tools/ud_compose.py + tools/ud_pages.py 를 돌리면 이 클래스가 그대로 붙는다.
-   (원본 unDraw 는 fill 이 hex 라 그대로 두면 다크 모드가 죽어서 클래스로 바꿔 명암을 뒤집는다) */
-.sh-art .u-ac { fill: var(--brand); }
-.sh-art .u-dk { fill: #2f3846; }
-.sh-art .u-dk2 { fill: #1b212a; }
-.sh-art .u-l1 { fill: #e2ded3; }
-.sh-art .u-l2 { fill: #f1eee6; }
-.sh-art .u-l3 { fill: #cfd5dd; }
-.sh-art .u-wh { fill: #ffffff; }
-.sh-art .u-sk { fill: #f0b8a8; }
-.sh-art .u-sk2 { fill: #cf8f81; }
-.sh-art .u-pt { fill: #dd8791; }
-
-.mock { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--card); box-shadow: var(--sh-sm); }
-/* 실제 콘솔 캡처. 원본이 밝은 배경이라 다크에서는 살짝 눌러 눈부심을 줄인다. */
-.shot { display: block; width: 100%; height: auto; }
+  .subhero .shell { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr); gap: 44px; align-items: center; }}
 /* 캡처는 목업보다 정보 밀도가 높아 2단의 좁은 칸에 넣으면 글자가 뭉갠다. 한 줄을 다 쓴다. */
 @media (min-width: 980px) {
   /* ★캡처를 가진 자식만 넓히면 설명 칼럼이 좁은 채로 남아 제목·문장이 접힌다.
@@ -1141,117 +800,11 @@ h1, h2, h3, h4 {
   .stepbig.rev:has(.shot) .stepbig-copy, .zig.rev:has(.shot) .zig-copy { order: 0; }
 }
 
-/* ★밝은 회색·베이지 계열은 어떤 값을 써도 섹션 배경(--bg-soft)이나 카드(흰색)에 묻힌다.
-   명도만 조정하지 말고 계열 자체를 갈라 진한 브랜드색을 쓴다. 실제 창 제목줄처럼 읽힌다. */
-.mock-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 11px 15px;
-  background: var(--brand-deep);
-  color: #fff;
-}
-
-.mock-bar .dots { display: flex; gap: 5px; }
-.mock-bar .dots i { width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, 0.42); }
-.mock-bar strong { font-size: 13px; color: #fff; }
-.mock-bar .meta { margin-left: auto; font-size: 11.5px; color: rgba(255, 255, 255, 0.72); }
-
-.mock-tools { display: flex; flex-wrap: wrap; gap: 7px; padding: 11px 15px; border-bottom: 1px solid var(--line-soft); }
-
-.chip {
-  font-size: 12px;
-  font-weight: 600;
-  padding: 4px 11px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  color: var(--ink-3);
-  background: var(--card);
-  white-space: nowrap;
-}
-
 .chip.on { background: var(--brand-soft); border-color: var(--brand-line); color: var(--brand-ink); }
-.chip.grow { flex: 1; min-width: 110px; text-align: left; }
-
-.mock-scroll { overflow-x: auto; }
-table.t { width: 100%; border-collapse: collapse; font-size: 12.5px; }
-
-table.t th {
-  text-align: left;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--ink-3);
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--line-soft);
-  white-space: nowrap;
-  background: var(--bg-soft);
-}
-
-table.t td { padding: 11px 14px; border-bottom: 1px solid var(--line-soft); color: var(--ink-2); white-space: nowrap; }
-table.t tbody tr:last-child td { border-bottom: 0; }
-table.t .nm { color: var(--ink); font-weight: 700; }
 table.t .num { font-family: var(--ff-mono); font-variant-numeric: tabular-nums; }
-table.t .r { text-align: right; }
-
-.bdg { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
-.bdg.ok { background: var(--ok-soft); color: var(--ok); }
-.bdg.run { background: var(--brand-soft); color: var(--brand-ink); }
-.bdg.warn { background: var(--warn-soft); color: var(--warn); }
-.bdg.red { background: var(--danger-soft); color: var(--danger); }
-.bdg.gray { background: var(--line-soft); color: var(--ink-3); }
 .bdg.line { background: transparent; border: 1px solid var(--line); color: var(--ink-2); font-weight: 600; }
 
-.bars { display: flex; flex-direction: column; gap: 4px; min-width: 140px; }
-.barline { display: flex; align-items: center; gap: 7px; }
-.barline em { font-style: normal; width: 28px; font-size: 10.5px; color: var(--ink-3); }
-.barline u { flex: 1; height: 5px; border-radius: 999px; background: var(--line-soft); overflow: hidden; text-decoration: none; }
-.barline u i { display: block; height: 100%; border-radius: 999px; background: var(--brand); }
-.barline u i.done { background: var(--ok); }
-.barline s { text-decoration: none; font-family: var(--ff-mono); font-size: 11px; font-weight: 700; color: var(--ink); width: 32px; text-align: right; }
-
-.steps3 { display: flex; gap: 4px; padding: 12px 15px 0; }
-
-.steps3 span {
-  font-size: 12px;
-  font-weight: 700;
-  padding: 7px 14px;
-  border-radius: 8px 8px 0 0;
-  color: var(--ink-3);
-  background: var(--bg-soft);
-}
-
 .steps3 span.on { background: var(--brand); color: #fff; }
-
-.grp { padding: 10px 15px 6px; font-size: 12px; font-weight: 700; color: var(--ink-3); background: var(--bg-soft); }
-.grp.hot { color: var(--danger); }
-.sch { display: flex; align-items: center; gap: 8px; padding: 10px 15px; border-bottom: 1px solid var(--line-soft); font-size: 12.5px; }
-.sch:last-child { border-bottom: 0; }
-.sch .d { width: 88px; flex: none; font-family: var(--ff-mono); font-size: 11.5px; font-weight: 700; color: var(--ink); }
-.sch .no { font-family: var(--ff-mono); font-weight: 700; color: var(--ink); flex: none; }
-.sch .w { min-width: 0; flex: 1; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.mock-cap { margin-top: 12px; font-size: 12.5px; color: var(--ink-3); text-align: center; }
-
-/* 기관 연결 다이어그램 */
-.wire { display: block; width: 100%; height: auto; overflow: visible; }
-.w-card { fill: var(--card); stroke: var(--line); stroke-width: 1.2; }
-.w-card-b { fill: var(--card); stroke: var(--brand-line); stroke-width: 1.4; }
-.w-name { fill: var(--ink); font-family: var(--ff-body); font-size: 15.5px; font-weight: 700; }
-.w-sub { fill: var(--ink-3); font-family: var(--ff-body); font-size: 12.5px; }
-.w-line { stroke: var(--line); stroke-width: 1.4; fill: none; }
-.w-line-on { stroke: var(--brand); stroke-width: 1.6; fill: none; }
-.w-dot { fill: var(--brand); }
-.w-dot-o { fill: var(--card); stroke: var(--brand); stroke-width: 1.6; }
-.w-panel { fill: var(--card); stroke: var(--line); stroke-width: 1.2; }
-.w-head { fill: var(--bg-soft); }
-.w-bar { fill: var(--line-soft); }
-.w-bar-on { fill: var(--brand-line); }
-.w-t { fill: var(--ink); font-family: var(--ff-body); font-size: 14px; font-weight: 700; }
-.w-t2 { fill: var(--ink-3); font-family: var(--ff-body); font-size: 12px; }
-.w-chip { fill: var(--ok-soft); }
-.w-chip-t { fill: var(--ok); font-family: var(--ff-body); font-size: 11.5px; font-weight: 700; }
-.w-ico { fill: var(--brand-soft); }
-.w-ico-t { fill: var(--brand); font-family: var(--ff-body); font-size: 12px; font-weight: 700; }
 
 /* ─────────────────────────  숫자 띠  ───────────────────────── */
 .numbers { background: linear-gradient(135deg, #12283f, #1d3a5f 55%, #2b5480); color: #fff; padding: 76px 0; }
@@ -1266,7 +819,7 @@ table.t .r { text-align: right; }
 .numbers .btn-ghost:hover { background: rgba(255, 255, 255, 0.12); border-color: #fff; color: #fff; }
 .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; text-align: center; }
 
-@media (min-width: 860px) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 860px) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }}
 /* ★숫자 3개짜리 행. .stats 의 4열 규칙보다 뒤에, 특이도도 높게 둬야 한다.
    앞에 두면 4열이 이겨서 항목이 왼쪽 3칸에 몰리고 오른쪽 한 칸이 빈다. */
 .stats.stats-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -1281,69 +834,7 @@ table.t .r { text-align: right; }
 
 .stat b i { font-style: normal; font-size: 0.5em; margin-left: 3px; opacity: 0.9; }
 .stat span { display: block; margin-top: 10px; font-size: 13.5px; color: rgba(255, 255, 255, 0.85); }
-
-/* ─────────────────────────  3단계  ───────────────────────── */
-.flow { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
-
-@media (min-width: 900px) { .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-
-.step {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--r-card);
-  padding: 30px 26px 28px;
-  box-shadow: var(--sh-sm);
-}
-
-.step .n {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: var(--brand);
-  color: #fff;
-  font-family: var(--ff-display);
-  font-size: 17px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.step h3 { font-size: 18px; margin-bottom: 9px; }
-.step p { font-size: 14.5px; color: var(--ink-2); }
 .step .who { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line-soft); font-size: 12.5px; color: var(--ink-3); font-weight: 600; }
-.step p { margin-bottom: 18px; }
-
-/* ─────────────────────────  보안  ───────────────────────── */
-.guards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
-
-@media (min-width: 760px) { .guards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-
-.guard {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--r-card);
-  padding: 26px 24px 28px;
-  box-shadow: var(--sh-sm);
-}
-
-.guard h3 { font-size: 17px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-
-.guard h3 svg {
-  width: 20px;
-  height: 20px;
-  flex: none;
-  stroke: var(--brand);
-  fill: none;
-  stroke-width: 1.9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.guard p { font-size: 14.5px; color: var(--ink-2); }
 
 /* ─────────────────────────  FAQ  ───────────────────────── */
 .faq { max-width: 840px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
@@ -1412,14 +903,14 @@ table.t .r { text-align: right; }
 .foot { border-top: 1px solid var(--line); padding: 44px 0 56px; font-size: 13px; color: var(--ink-3); }
 .foot-in { display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; }
 
-@media (min-width: 820px) { .foot-in { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 60px; } }
+@media (min-width: 820px) { .foot-in { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 60px; }}
 
 .foot dl { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px 26px; }
 .foot dt { font-weight: 700; color: var(--ink-2); display: inline; }
 .foot dd { margin: 0 0 0 8px; display: inline; }
 .foot .row2 { margin-top: 18px; line-height: 1.8; }
 
-@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; }}
 
 /* 두 문단이라 폭을 잡아 주지 않으면 한 줄이 끝까지 늘어지고 마지막 낱말만 떨어진다. */
 /* ★ch는 숫자 0 글리프 기준이라 한글에는 좁다. 둘째 줄(약 568px)이 안 접히도록 68ch(약 600px). */
@@ -1474,13 +965,7 @@ table.t .r { text-align: right; }
 .wflow-after li { align-items: flex-start; }
 .wflow-after li::before { margin-top: 1px; }
 .wflow-after li i { display: block; font-style: normal; font-size: 12.5px; font-weight: 400; color: var(--ink-2); margin-top: 2px; }
-.wflow-after li:not(:last-child)::after { border-left-color: var(--brand-line); }
-.auto-box { margin-top: 18px; padding: 16px 18px; border-radius: 12px; background: var(--brand-soft); border: 1px solid var(--brand-line); }
-.auto-t { font-size: 12px; font-weight: 700; color: var(--brand); letter-spacing: .04em; margin-bottom: 10px; }
-.auto-box p { margin: 0 0 7px; padding-left: 15px; position: relative; font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
-.auto-box p:last-child { margin-bottom: 0; }
-.auto-box p::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
-</style>
+.wflow-after li:not(:last-child)::after { border-left-color: var(--brand-line); }</style>
 
 <div class="banner" id="banner">
   <div class="shell banner-in">
@@ -1646,6 +1131,7 @@ table.t .r { text-align: right; }
 
       <div class="feat-lead">
         <a class="feat-card lead" href="collect.html">
+          <span class="feat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></span>
           <h3><i class="num">01.</i>개인회생 서류 자동수집</h3>
           <p>의뢰인에게 링크 하나를 보내면 필요한 서류를 수집하고 정리합니다.</p>
           <span class="more">자세히 보기 →</span>
@@ -1654,18 +1140,21 @@ table.t .r { text-align: right; }
 
       <div class="feat-rest">
         <a class="feat-card" href="registry.html">
+          <span class="feat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg></span>
           <h3><i class="num">02.</i>부동산 서류 발급</h3>
           <p>주소 한 번으로 등기부등본·건축물대장 발급을 간소화합니다.</p>
           <span class="more">자세히 보기 →</span>
         </a>
 
         <a class="feat-card" href="court.html">
+          <span class="feat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></span>
           <h3><i class="num">03.</i>사건 · 기일 관리</h3>
           <p>사건정보와 기일을 한곳에서 확인하고 관리합니다.</p>
           <span class="more">자세히 보기 →</span>
         </a>
 
         <a class="feat-card" href="accounts.html">
+          <span class="feat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
           <h3><i class="num">04.</i>사무소 계좌 · 세금계산서</h3>
           <p>사무소 계좌와 전자세금계산서를 한곳에서 관리합니다.</p>
           <span class="more">자세히 보기 →</span>
