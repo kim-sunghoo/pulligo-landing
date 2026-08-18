@@ -1371,6 +1371,28 @@ table.t .r { text-align: right; }
 /* 화면 4장만 보여 주는 축약형 */
 .journey.four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (min-width: 900px) { .journey.four { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; } }
+
+/* 의뢰인 화면 4장은 실제 휴대폰처럼 베젤을 둘러 목업으로 보이게 한다 */
+.journey.four .phone {
+  position: relative;
+  max-width: 236px;
+  padding: 13px 9px 15px;
+  border: 0;
+  border-radius: 30px;
+  background: #1b212a;
+  box-shadow: 0 20px 44px -20px rgba(18, 40, 63, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.09);
+}
+.journey.four .phone .ph { border-radius: 20px; overflow: hidden; background-color: #fff; }
+/* 상단 스피커 슬릿 */
+.journey.four .phone::before {
+  content: ""; position: absolute; top: 5px; left: 50%; transform: translateX(-50%);
+  width: 46px; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.22);
+}
+/* 하단 홈 인디케이터 */
+.journey.four .phone::after {
+  content: ""; position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);
+  width: 70px; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.38);
+}
 .jn { display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .jn .phone { max-width: 210px; }
 .jn-no { font-family: var(--ff-mono); font-size: 11.5px; font-weight: 700; color: var(--brand); letter-spacing: .08em; }
