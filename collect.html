@@ -589,13 +589,14 @@ h1, h2, h3, h4 {
 .phone { width: 100%; max-width: 260px; border: 1px solid var(--line); border-radius: 22px; background: var(--card); box-shadow: var(--sh); overflow: hidden; }
 
 /* 기관 커버리지 요약 */
-.cov { border: 1px solid var(--line); border-radius: 16px; background: var(--card); overflow: hidden; box-shadow: var(--sh-sm); }
-.cov-row { display: grid; grid-template-columns: minmax(0, 160px) minmax(0, 1fr) 54px; gap: 14px; align-items: center; padding: 13px 20px; border-bottom: 1px solid var(--line-soft); }
-.cov-row:last-child { border-bottom: 0; }
-.cov-row .o { font-size: 14px; font-weight: 700; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.cov-row .bar { height: 8px; border-radius: 999px; background: var(--line-soft); overflow: hidden; }
-.cov-row .bar i { display: block; height: 100%; border-radius: 999px; background: var(--brand); }
-.cov-row .n { text-align: right; font-family: var(--ff-mono); font-size: 13px; font-weight: 700; color: var(--ink-2); }
+/* 기관 목록 - 막대는 종수 차이를 과장할 뿐이라 값만 보여 주는 칩 격자로 */
+.orgs-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (min-width: 700px) { .orgs-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1040px) { .orgs-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.org-chip { display: flex; flex-direction: column; gap: 8px; padding: 16px 16px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--card); box-shadow: var(--sh-sm); }
+.org-chip .o { font-size: 13.5px; font-weight: 700; color: var(--ink); line-height: 1.45; }
+.org-chip .n { font-family: var(--ff-display); font-size: 22px; font-weight: 700; color: var(--brand); letter-spacing: -0.02em; }
+.org-chip .n em { font-style: normal; font-size: 0.55em; font-weight: 700; color: var(--ink-3); margin-left: 2px; }
 
 @media (max-width: 640px) { .cov-row { grid-template-columns: minmax(0, 1fr) 50px; } .cov-row .bar { display: none; }}
 
@@ -910,17 +911,17 @@ h1, h2, h3, h4 {
           아래 51종은 기관 연계를 통해 자동발급되는 서류입니다. 사건분야별 필요 서류에 따라 필요한 항목만 요청됩니다.</p>
       </div>
 
-      <div class="cov">
-        <div class="cov-row"><span class="o">정부24</span><span class="bar"><i style="width:100%"></i></span><span class="n">11종</span></div>
-        <div class="cov-row"><span class="o">홈택스</span><span class="bar"><i style="width:100%"></i></span><span class="n">11종</span></div>
-        <div class="cov-row"><span class="o">계좌통합관리</span><span class="bar"><i style="width:55%"></i></span><span class="n">6종</span></div>
-        <div class="cov-row"><span class="o">국민건강보험</span><span class="bar"><i style="width:45%"></i></span><span class="n">5종</span></div>
-        <div class="cov-row"><span class="o">위택스</span><span class="bar"><i style="width:36%"></i></span><span class="n">4종</span></div>
-        <div class="cov-row"><span class="o">국민연금공단</span><span class="bar"><i style="width:27%"></i></span><span class="n">3종</span></div>
-        <div class="cov-row"><span class="o">전자가족관계등록</span><span class="bar"><i style="width:27%"></i></span><span class="n">3종</span></div>
-        <div class="cov-row"><span class="o">본인신용정보</span><span class="bar"><i style="width:27%"></i></span><span class="n">3종</span></div>
-        <div class="cov-row"><span class="o">K-GeoP · 부동산거래관리</span><span class="bar"><i style="width:27%"></i></span><span class="n">3종</span></div>
-        <div class="cov-row"><span class="o">건강보험심사평가원</span><span class="bar"><i style="width:18%"></i></span><span class="n">2종</span></div>
+      <div class="orgs-grid">
+        <div class="org-chip"><span class="o">정부24</span><span class="n">11<em>종</em></span></div>
+        <div class="org-chip"><span class="o">홈택스</span><span class="n">11<em>종</em></span></div>
+        <div class="org-chip"><span class="o">계좌통합관리</span><span class="n">6<em>종</em></span></div>
+        <div class="org-chip"><span class="o">국민건강보험</span><span class="n">5<em>종</em></span></div>
+        <div class="org-chip"><span class="o">위택스</span><span class="n">4<em>종</em></span></div>
+        <div class="org-chip"><span class="o">국민연금공단</span><span class="n">3<em>종</em></span></div>
+        <div class="org-chip"><span class="o">전자가족관계등록</span><span class="n">3<em>종</em></span></div>
+        <div class="org-chip"><span class="o">본인신용정보</span><span class="n">3<em>종</em></span></div>
+        <div class="org-chip"><span class="o">K-GeoP · 부동산거래관리</span><span class="n">3<em>종</em></span></div>
+        <div class="org-chip"><span class="o">건강보험심사평가원</span><span class="n">2<em>종</em></span></div>
       </div>
     </div>
   </section>
