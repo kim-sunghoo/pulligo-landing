@@ -780,8 +780,8 @@ h1, h2, h3, h4 {
 .pl-cond { margin: 14px 0 24px; font-size: 13.5px; color: var(--ink-3); }
 
 /* 서비스 카드 아이콘 (lucide) - 배경 워터마크 대신 앞면 배지로 */
-.feat-top { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
-.feat-top h3 { margin-bottom: 0; }
+.feat-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; }
+.feat-bottom .more { margin-top: 0; }
 .feat-ico { flex: none; margin-bottom: 0 !important; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-bottom: 14px; border-radius: 12px; background: var(--brand-soft); }
 .feat-ico svg { width: 22px; height: 22px; fill: none; stroke: var(--brand); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .feat-card.lead .feat-ico { width: 50px; height: 50px; border-radius: 14px; background: var(--card); }
@@ -1030,8 +1030,8 @@ table.t .num { font-family: var(--ff-mono); font-variant-numeric: tabular-nums; 
       <div class="hero-copy">
         <h1>개인회생 서류 수집,<br><span class="hl">링크 하나로 시작하세요</span></h1>
         <p class="lede">
-          의뢰인이 휴대폰에서 인증만 하면, 서류 발급과 수집은 풀리고가 이어서 처리합니다.
-          사무소는 목록을 만들거나 재촉할 필요 없이 한곳에서 확인합니다.
+          의뢰인이 휴대폰에서 인증하면, 서류 발급과 수집은 풀리고가 이어서 처리합니다.
+          사무소는 필요한 서류와 진행 상태를 한곳에서 확인합니다.
         </p>
         <p class="lede" style="font-size:15px;max-width:440px">
           서류 자동수집에서 시작해 등기 · 사건 · 기일 · 계좌 관리까지,
@@ -1083,7 +1083,7 @@ table.t .num { font-family: var(--ff-mono); font-variant-numeric: tabular-nums; 
     <div class="shell">
       <div class="sec-head">
         <div class="tag-en">BEFORE / AFTER</div>
-        <h2>개인회생 서류 수집,<br>이제 <span class="hl">풀리고가 함께합니다</span></h2>
+        <h2>개인회생 서류 수집,<br><span class="hl">풀리고가 이어서</span> 처리합니다</h2>
         <p>의뢰인에게 링크 하나만 보내세요.<br>
           본인인증부터 서류 발급·제출까지, 풀리고가 수집 과정을 간편하게 연결합니다.</p>
       </div>
@@ -1109,7 +1109,7 @@ table.t .num { font-family: var(--ff-mono); font-variant-numeric: tabular-nums; 
         </div>
 
         <div class="ba-card after">
-          <div class="ba-head"><span class="ba-tag">풀리고</span><strong>서류 수집 과정을 하나로 연결합니다</strong></div>
+          <div class="ba-head"><span class="ba-tag">풀리고</span><strong>풀리고가 서류 수집을 이어서 처리합니다</strong></div>
           <ol class="wflow wflow-after">
             <li><span><b>사건 등록</b><em>사무소</em><i>의뢰인 정보를 입력합니다</i></span></li>
             <li><span><b>링크 발송</b><em>사무소</em><i>의뢰인에게 전용 링크를 보냅니다</i></span></li>
@@ -1117,7 +1117,7 @@ table.t .num { font-family: var(--ff-mono); font-variant-numeric: tabular-nums; 
             <li><span><b>서류 발급 · 제출</b><em>자동 · 의뢰인</em><i>필요한 서류를 자동으로 발급하거나 모바일로 제출합니다</i></span></li>
             <li><span><b>수집 완료</b><em>사무소</em><i>진행 상황과 서류를 한곳에서 확인합니다</i></span></li>
           </ol>
-          <div class="ba-foot">사무소는 확인하고 검토하는 일에 집중하세요</div>
+          <div class="ba-foot">사무소에서는 진행 상황과 서류를 한곳에서 확인합니다</div>
         </div>
       </div>
     </div>
@@ -1133,41 +1133,41 @@ table.t .num { font-family: var(--ff-mono); font-variant-numeric: tabular-nums; 
 
       <div class="feat-lead">
         <a class="feat-card lead" href="collect.html">
-          <div class="feat-top">
+          <h3><i class="num">01.</i>개인회생 서류 자동수집</h3>
+          <p>의뢰인에게 링크를 보내 필요한 서류를 수집하고 진행 상황을 확인합니다.</p>
+          <div class="feat-bottom">
+            <span class="more">자세히 보기 →</span>
             <span class="feat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></span>
-            <h3><i class="num">01.</i>개인회생 서류 자동수집</h3>
           </div>
-          <p>의뢰인에게 링크 하나를 보내면 필요한 서류를 수집하고 정리합니다.</p>
-          <span class="more">자세히 보기 →</span>
         </a>
       </div>
 
       <div class="feat-rest">
         <a class="feat-card" href="registry.html">
-          <div class="feat-top">
-            <span class="feat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg></span>
-            <h3><i class="num">02.</i>부동산 서류 발급</h3>
-          </div>
+          <h3><i class="num">02.</i>부동산 서류 발급</h3>
           <p>주소 한 번으로 등기부등본·건축물대장 발급을 간소화합니다.</p>
-          <span class="more">자세히 보기 →</span>
+          <div class="feat-bottom">
+            <span class="more">자세히 보기 →</span>
+            <span class="feat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg></span>
+          </div>
         </a>
 
         <a class="feat-card" href="court.html">
-          <div class="feat-top">
-            <span class="feat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></span>
-            <h3><i class="num">03.</i>사건 · 기일 관리</h3>
-          </div>
+          <h3><i class="num">03.</i>사건 · 기일 관리</h3>
           <p>사건정보와 기일을 한곳에서 확인하고 관리합니다.</p>
-          <span class="more">자세히 보기 →</span>
+          <div class="feat-bottom">
+            <span class="more">자세히 보기 →</span>
+            <span class="feat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></span>
+          </div>
         </a>
 
         <a class="feat-card" href="accounts.html">
-          <div class="feat-top">
-            <span class="feat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg></span>
-            <h3><i class="num">04.</i>사무소 계좌 · 세금계산서</h3>
-          </div>
+          <h3><i class="num">04.</i>사무소 계좌 · 세금계산서</h3>
           <p>사무소 계좌와 전자세금계산서를 한곳에서 관리합니다.</p>
-          <span class="more">자세히 보기 →</span>
+          <div class="feat-bottom">
+            <span class="more">자세히 보기 →</span>
+            <span class="feat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></span>
+          </div>
         </a>
       </div>
     </div>
